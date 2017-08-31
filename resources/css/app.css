@@ -1,0 +1,130 @@
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  /*font-family: "Montserrat";*/
+  /*font-weight: 20;*/
+  font-size: 12px;
+  background-color: gray;
+
+  height: 100%;
+  /*background-image: url("../images/app/ab37.jpg");*/
+  
+  background-attachment: fixed;
+
+
+  /*padding-top: 70px;*/
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 100;
+}
+
+.list_image {
+  width: 100%;
+  height: 300px;
+}
+
+.b_imagesj img:hover {
+  opacity: 0.5;
+}
+
+.show_image {
+  width: 100%;
+  
+}
+
+.thumbnail_image {
+  margin-top: 10px;
+  width: 100px;
+  border-radius: 20px;
+  
+}
+
+
+.header_img {
+  background-color: red;
+  width: 100%;
+  height: 150px;
+  background-image: url("../images/app/Nairobi_panorama_from_westlands.jpg");
+  background-size: 100% 100%;
+  margin-bottom: 10px;
+
+}
+
+
+.header{
+  width: 100%;
+  background-color: lightblue;
+}
+
+
+.red {<!--from   w w  w  .j a v a2s.c  o m-->
+    background-color: red;
+}
+
+.italic {
+    font-style: italic;
+    color: black;
+}
+
+
+/**********************************************************************/
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+color: purple;  /*Sets the text hover color on navbar*/
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active >   
+ a:hover, .navbar-default .navbar-nav > .active > a:focus {
+color: orange; /*BACKGROUND color for active*/
+background-color: orange;
+}
+
+  .navbar-default {
+    
+    border-color: #fff;
+     background-image: none;
+    /*background-repeat: no-repeat;*/
+    background-color: lightblue;
+    width: 100%;
+ 
+}
+
+
+  .dropdown-menu > li > a:hover,
+   .dropdown-menu > li > a:focus {
+    color: green;
+   text-decoration: none;
+  background-color: gray;  /*change color of links in drop down here*/
+   }
+
+.navbar-nav > li > .dropdown-menu { 
+  background-color: white; 
+}
+
+.navbar-nav > li > .dropdown-menu a:hover {
+ background-color: black;
+ color: white; 
+}
+
+ .nav > li > a:hover,
+ .nav > li > a:focus {
+    text-decoration: none;
+    background-color: gray; /*Change rollover cell color here*/
+    color: white;
+  }
+
+
+  .navbar-default .navbar-nav > li > a {
+   color: white !important; /*Change active text color here*/
+
+    }
+
+
+/**********************************************************************/
+
+/**********************************************************************/

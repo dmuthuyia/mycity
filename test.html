@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="./resources/frameworks/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./resources/css/app.css">
+
+	<script src="./resources/frameworks/jquery/jquery-1.11.3.min.js"></script>
+
+</head>
+<body>
+
+
+<form name="form">
+	<table>
+		<tr>
+		<td>Num 1:</td>
+		<td><input type="text" name="num1" id="num1" /></td>
+		</tr>
+		<tr>
+		<td>Num 2:</td>
+		<td><input type="text" name="num2" id="num2" /></td>
+		</tr>
+		<tr>
+		<td>Sum:</td>
+		<td><input type="text" name="sum" id="sum" readonly /></td>
+		</tr>
+		<tr>
+		<td>Subtract:</td>
+		<td><input type="text" name="subt" id="subt" readonly /></td>
+		</tr>
+	</table>
+
+	<button type="button" id="calc"> calculate</button>
+	<button type="button" id="summ"> sum</button>
+	<button type="button" id="subb"> subtract</button>
+</form>
+
+
+<script type="text/javascript">
+	
+
+	//$(function() {
+	    //$("#num1, #num2").on("keydown keyup", sum);
+		//function sum() {
+		//$("#sum").val(Number($("#num1").val()) + Number($("#num2").val()));
+		//$("#subt").val(Number($("#num1").val()) - Number($("#num2").val()));
+		//}
+	//});
+
+	//$(function() {
+	//    $("#calc").on("keydown keyup click hover", calc);
+	//    $("#summ").on("keydown keyup click hover", summ);
+	//    $("#subb").on("keydown keyup click hover", subb);
+
+	//	function calc() {
+	//	$("#sum").val(Number($("#num1").val()) + Number($("#num2").val()));
+	//	$("#subt").val(Number($("#num1").val()) - Number($("#num2").val()));
+	//	}
+
+ 
+	//	function summ() {
+	//	$("#sum").val(Number($("#num1").val()) + Number($("#num2").val()));
+	//	}
+
+
+	//	function subb() {
+	//	$("#subt").val(Number($("#num1").val()) - Number($("#num2").val()));
+	//	}
+
+//	});
+
+
+
+	$(function() {
+	    $("#calc").on("keydown keyup click hover", calc);
+		function calc() {
+		$("#sum").val(Number($("#num1").val()) + Number($("#num2").val()));
+		$("#subt").val(Number($("#num1").val()) - Number($("#num2").val()));
+		}
+	});
+
+
+
+	$(function() {
+	    $("#summ").on("keydown keyup click hover", summ);
+		function summ() {
+		$("#sum").val(Number($("#num1").val()) + Number($("#num2").val()));
+		}
+	});
+
+
+	$(function() {
+	    $("#subb").on("keydown keyup click hover", subb);
+		function subb() {
+		$("#subt").val(Number($("#num1").val()) - Number($("#num2").val()));
+		}
+	});
+
+
+</script>
+
+</body>
+
+	<script src="./resources/frameworks/angular-js/angular.min.js"></script>
+	<script src="./resources/frameworks/bootstrap/js/bootstrap.min.js"></script>
+	<script src="./resources/frameworks/ui-bootstrap/ui-bootstrap-2.5.0.min.js"></script>
+	<script src="./resources/frameworks/ui-bootstrap/ui-bootstrap-tpls-2.5.0.min.js"></script>
+	<script src="./resources/js/app.js"></script>
+	<script src="./resources/js/controllers/list.js"></script> 
+
+</html>

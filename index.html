@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html ng-app="turtleFacts">
+<head>
+	<title>Muthuyia Angular js - My city, Nairobi. </title>
+	<link rel="stylesheet" type="text/css" href="./resources/frameworks/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./resources/css/app.css">
+
+	<script src="./resources/frameworks/jquery/jquery-1.11.3.min.js"></script>
+
+</head>
+<body>
+
+<div ng-controller="listCtrl as list">
+
+    <div class="header">
+    		<nav class="navbar navbar-default">
+    			<div class="container-fluid">
+    		    	<ul class="navbar-nav nav navbar-left">
+    		      		<li><a href="" class="navlog">My city</a></li>
+    		      		<li><a href="">About us</a></li>
+                        <li><a href="./pages/test.html">Test</a></li>
+    		    	</ul>
+
+                    <ul class="navbar-nav nav navbar-right">
+
+                    <div style="margin: 5px;">
+                        <form class="form-inline clearfix">
+                            <input type="text" name="" class="form-control" placeholder="Search.." ng-model="list.searchtext">
+                        </form> 
+                    </div> 
+                    </ul>
+
+
+    			</div>
+    		</nav>
+
+    		<div class="container">
+    			<div class="header_img">
+    			</div>
+    			
+    		</div>
+    </div>
+
+
+    <div class="container">
+    	<div>
+        <form class="form-inline well well-sm clearfix">
+
+            <button class="btn btn-primary pull-left" ng-click="list.activateQuiz()">
+                StartQuiz
+            </button>
+            
+        </form>
+
+    		<div class="row" ng-hide="list.quizActivate">
+
+    			<div class="col-sm-6" ng-repeat="building in list.data | filter:list.searchtext">
+    				<div class="well well-sm">
+
+    					<div class="row">
+
+    						<div class="col-md-6 b_images" ng-style="imgStyle" ng-mouseleave="imgStyle={}" ng-mouseover="imgStyle={ 'opacity':'0.5'}">
+
+    							<a href="" data-toggle="modal" data-target="#show" ng-click="list.changeActiveBuilding(building)">
+    							
+    								<img ng-src="{{building.image_url}}" class="img-rounded img-responsive list_image">	
+    							</a>
+    				
+    						</div>
+
+    						<div class="col-md-6" >
+    							<h4 ng-style="buildingStyle" ng-mouseleave="buildingStyle={}" ng-mouseover="buildingStyle={ 'background-color':'lightblue','color':'red'}">Name: {{building.name}}</h4>
+    							<h4>Height: {{building.height}}</h4>
+    							<h4>Floors: {{building.floors}}</h4>
+    							<h4>Location: {{building.location}}</h4>						
+    						</div>
+    						
+    					</div>
+    					
+    				</div>
+    			</div>
+
+    		</div>
+
+    		<div class="modal" id="show">
+    			<div class="modal-dialog">
+    				<div class="modal-content">
+    					<div class="modal-header" style="display: inline; padding: 10px;">
+    						<span style="text-align: center; font-size: 18px;">{{list.activeBuilding.name}}</span>
+    						<button type="button" class="btn btn-default pull-right" data-dismiss="modal" style="margin-right: 5px;">
+    							X
+                     		</button>
+    						
+    					</div>
+
+
+    					<div class="modal-body">
+    						<div class="row">
+    							<div class="col-xs-8 col-xs-offset-2">
+    								<img ng-src="{{list.activeBuilding.image_url}}" class="img-rounded img-responsive show_image">
+    							</div>
+    							
+    						</div>
+
+    						<div class="row">
+
+    							<div class="col-md-6">
+    								<img ng-src="{{list.activeBuilding.image_url}}" class="img-rounded img-responsive thumbnail_image pull-right">
+    							</div>
+
+    							<div class="col-md-6">
+    								<h4>Name: {{list.activeBuilding.name}}</h4>
+    								<h4>Height: {{list.activeBuilding.height}}</h4>
+    								<h4>Floors: {{list.activeBuilding.floors}}</h4>
+    								<h4>Location: {{list.activeBuilding.location}}</h4>	
+
+
+    							</div>
+
+
+    							
+    						</div>
+    						
+    					</div>
+
+
+              			<div class="modal-footer">
+
+                  		
+              			</div>
+
+    				</div>
+    				
+    			</div>
+    			
+    		</div>
+    		
+    	</div>
+
+
+
+
+    </div>
+
+
+
+</div>
+
+</body>
+
+
+	<script src="./resources/frameworks/angular-js/angular.min.js"></script>
+	<script src="./resources/frameworks/bootstrap/js/bootstrap.min.js"></script>
+	<script src="./resources/frameworks/ui-bootstrap/ui-bootstrap-2.5.0.min.js"></script>
+	<script src="./resources/frameworks/ui-bootstrap/ui-bootstrap-tpls-2.5.0.min.js"></script>
+	<script src="./resources/js/app.js"></script>
+	<script src="./resources/js/controllers/list.js"></script> 
+</html>
